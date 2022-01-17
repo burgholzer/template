@@ -1,18 +1,18 @@
 #pragma once
 
 namespace project {
-	class Dummy {
-	public:
-		Dummy() = default;
+    class Dummy {
+    public:
+        Dummy() = default;
 
-		explicit Dummy(double val) :
-				val(val) { }
+        explicit Dummy(double val):
+            val(val) {}
 
-		[[nodiscard]] double getVal() const;
+        [[nodiscard]] double getVal() const;
 
-		void setVal(double v);
+        void setVal(double v);
 
-	protected:
-		double val{ };
-	};
+    protected:
+        double val{};
+    };
 } // namespace project
