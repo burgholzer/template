@@ -25,7 +25,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.3.1
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           path: ./wheelhouse/*.whl
 
@@ -40,7 +40,7 @@ jobs:
         uses: pypa/cibuildwheel@v2.3.1
         env:
           CIBW_ARCHS_MACOS: arm64
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           path: ./wheelhouse/*.whl
 
@@ -64,7 +64,7 @@ jobs:
         env:
           CC:  "gcc-10"
           CXX: "g++-10"
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           path: dist/*.tar.gz
 
